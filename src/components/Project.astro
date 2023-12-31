@@ -1,0 +1,57 @@
+---
+import { Icon } from "astro-icon";
+import { Image } from "astro:assets";
+import { t } from "i18next";
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+---
+
+<section class="project card mx-5 my-2 mt-10 flex flex-col">
+  <div class="content flex flex-col">
+    <article class="head grid justify-items-center">
+      <h1 class="title font-semibold text-2xl text-primary grid">
+        {project.name}
+        <span
+          class="border border-secondary border-b-2 border-solid w-[60%] justify-self-center"
+        ></span>
+      </h1>
+    </article>
+    <div class="body">
+      <p class="text-left px-6 py-3">
+        {project.description}
+      </p>
+    </div>
+    <div class="footer flex flex-col m-auto gap-y-2">
+      <span class="text-primary text-center font-semibold"
+        >{t("projects.tech.used")}</span
+      >
+      <div class="flex flex-row gap-3 flex-wrap justify-center">
+        {
+          project.technologies?.map((tech) => {
+            return (
+              <span
+                title={tech.tooltip ?? ""}
+                data-tooltip-placement="bottom"
+                class="tech-icon-project"
+              >
+                <Icon name={tech.name} width="40" />
+              </span>
+            );
+          })
+        }
+      </div>
+      <a
+        href="#"
+        class="bg-black dark:bg-white rounded-md px-2 py-1 text-white dark:text-black flex flex-row gap-1 font-semibold items-center w-fit self-center"
+      >
+        <Icon name="mdi:github" class="text-white dark:text-black" width="30" />
+        {t("projects.tech.link")}
+      </a>
+    </div>
+  </div>
+</section>
+
+

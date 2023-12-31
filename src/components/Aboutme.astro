@@ -1,0 +1,83 @@
+---
+import { Icon } from "astro-icon";
+import { t, changeLanguage } from "i18next";
+import { Trans, LanguageSelector } from "astro-i18next/components";
+import icons from "../ts/export/socials";
+import "../sass/main.scss";
+// import "../js/cards";
+---
+
+<div class="mx-5 my-2 mt-5 grid grid-cols-contact_me gap-4 xl:gap-2 md:gap-1">
+  <div class="image card">
+    <img src="/public/img/toji.png" alt="toji" />
+  </div>
+
+  <div
+    class="text flex flex-col gap-y-4 hover:shadow-gray-200/60 hover:shadow-lg card"
+  >
+    <div class="title mb-5">
+      <h1
+        class="mb-2 text-center font-bold text-4xl xl:text-3xl md:text-2xl border border-x-0 border-t-0 border-b-purple-600 border-b-2"
+      >
+        {t("about.head.name")}
+      </h1>
+      <p class="text-center text-purple-300 -mt-2 font-bold">
+        {t("about.head.title")}
+      </p>
+    </div>
+
+    <div class="description">
+      <p class="text-center font-bold leading-10 text-xl xl:text-lg md:text-sm">
+        <Trans i18nKey="about.body.description">
+          <span class="text-primary">¡Hola!</span> Soy un apasionado por la
+          <span class="text-secondary">&nbsp;programación</span>
+          <span class="text-primary">&nbsp;Backend</span> y mucho más cuando se
+          trata de
+
+          <span class="text-secondary">micro-servicios</span>. Espero <span
+            class="text-secondary">convertirme</span
+          > en un desarrollador
+          <span class="text-primary">Full Stack</span> :)
+        </Trans>
+      </p>
+    </div>
+
+    <div
+      class="contact_me grid grid-cols-2 justify-items-center px-10 items-center"
+    >
+      <div class="cv">
+        <a
+          class="bg-primary font-semibold rounded-md py-2 px-4 cursor-pointer text-xl"
+          href="/public/files/cv.pdf"
+          download="Jordi-Garcia-CV"
+        >
+          {t("about.body.cv-button")}
+        </a>
+      </div>
+
+      <div class="social">
+        <p class="text-primary text-xl mb-2 font-semibold">
+          {t("about.body.findme")}
+        </p>
+        <div class="icons flex flex-row gap-x-2">
+          {
+            icons &&
+              icons.map(({ link, iconName }) => {
+                return (
+                  <a href={link} target="_blank">
+                    <Icon
+                      name={iconName}
+                      width="30"
+                      class="hover:text-primary hover:ease-in-out hover:duration-700"
+                    />
+                  </a>
+                );
+              })
+          }
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+

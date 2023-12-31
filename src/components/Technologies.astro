@@ -1,0 +1,74 @@
+---
+import { Icon } from "astro-icon";
+import { t } from "i18next";
+import tools from "../ts/export/tools";
+import technologies from "../ts/export/technologies";
+---
+
+<div class="grid grid-cols-2 mt-5 mx-5 gap-4 xl:gap-2 md:gap-1">
+  <div class="card">
+    <div class="my-tech flex flex-col gap-y-10">
+      <div class="tools flex flex-col gap-y-4">
+        <div class="header grid justify-items-end">
+          <div class="text-xl font-semibold text-secondary text-right grid">
+            {t("technologies.tools")}
+            <span
+              class="border border-primary border-solid w-[50%] justify-self-end"
+            ></span>
+          </div>
+        </div>
+        <div class="content flex flex-row flex-wrap gap-5 m-auto my-5">
+          {
+            tools &&
+              tools.map(({ name, iconName }) => {
+                return (
+                  <span title={name ?? ""} data-tooltip-placement="bottom">
+                    <Icon
+                      name={iconName}
+                      width="70"
+                      class={
+                        "text-gray-600 dark:text-white hover:text-primary hover:ease-in-out hover:duration-700"
+                      }
+                    />
+                  </span>
+                );
+              })
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="my-tech flex flex-col gap-y-10">
+      <div class="tools flex flex-col gap-y-4">
+        <div class="header grid justify-items-end">
+          <div class="text-xl font-semibold text-secondary text-right grid">
+            {t("technologies.languages")}
+            <span
+              class="border border-primary border-solid w-[50%] justify-self-end"
+            ></span>
+          </div>
+        </div>
+        <div class="content flex flex-row flex-wrap gap-5 m-auto my-5">
+          {
+            technologies &&
+              technologies.map(({ name, iconName }) => {
+                return (
+                  <span title={name} data-tooltip-placement="bottom">
+                    <Icon
+                      name={iconName}
+                      width="70"
+                      class={
+                        "text-gray-600 dark:text-white hover:text-primary hover:ease-in-out hover:duration-700"
+                      }
+                    />
+                  </span>
+                );
+              })
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

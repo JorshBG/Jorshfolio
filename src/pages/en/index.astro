@@ -1,0 +1,31 @@
+---
+import { changeLanguage, t } from "i18next";
+import Layout from "../../layouts/Layout.astro";
+import About from "../../components/Aboutme.astro";
+import Tech from "../../components/Technologies.astro";
+import Config from "../../components/Config.astro";
+import projects from "../../ts/export/projects";
+import Project from "../../components/Project.astro";
+import NeonText from "../../components/NeonText.astro";
+import Tabs from "../../components/Tabs.astro";
+import ContentTabs from "../../ts/export/tabs";
+
+changeLanguage("en");
+---
+
+<Layout>
+  <About />
+  <Tech />
+  <Tabs tabs={ContentTabs}/>
+  <!-- <NeonText title={t("projects.title")} /> -->
+  {
+    projects.map((project) => {
+      return (
+        <>
+          <Project project={project} />
+        </>
+      );
+    })
+  }
+  <Config />
+</Layout>

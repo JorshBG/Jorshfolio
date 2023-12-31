@@ -1,0 +1,53 @@
+{
+  "about": {
+    "head": {
+      "name": "Jordi Yair Calva García",
+      "title": "Systems Engineering Student"
+    },
+    "body": {
+      "description": "<0>¡Hi!</0> I am passionate about <1>Backend</1><2> programming</2> and even more so when it comes to <3>micro-services</3>. I hope to <4>become</4> in a <5>Full Stack</5> developer :)",
+      "cv-button": "Download CV",
+      "findme": "Find me on:"
+    }
+  },
+  "another-word": "<0>Hi!</0> I am Jordi <1>Yair</1>",
+  "config": {
+    "language": {
+      "en": "English",
+      "es": "Spanish"
+    },
+    "options": {
+      "theme": "Theme",
+      "language": "Language"
+    },
+    "themes": {
+      "dark": "Dark",
+      "light": "Light"
+    }
+  },
+  "technologies": {
+    "languages": "Technologies I use",
+    "tools": "My toolkit"
+  },
+  "projects":{
+    "tech" :{
+      "used": "Used Techs",
+      "link":"Repository"
+    },
+    "title": "My projects"
+  },
+  "tabs":{
+    "school":{
+      "title":"School"
+    },
+    "project":{
+      "title":"Projects"
+    },
+    "certificates":{
+      "title":"Certificates"
+    },
+    "professionalexp":{
+      "title":"Professional experience"
+    }
+  }
+}

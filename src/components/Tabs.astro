@@ -1,0 +1,27 @@
+---
+import {t} from 'i18next'
+interface Props {
+  tabs: Array<{ name: string; id: string }>;
+}
+
+const { tabs } = Astro.props;
+---
+
+<section class="mx-5 mt-4">
+  <span class="border border-primary neon w-full block"></span>
+  <div class="tabs flex mt-2 flex-row flex-wrap justify-center gap-4">
+    {
+      tabs.map((tab) => {
+        return (
+          <div id={tab.id} class="card tab cursor-pointer text-lg font-semibold">
+            {t(tab.name)}
+          </div>
+        );
+      })
+    }
+  </div>
+  <span class="border mt-4 border-secondary w-full block"></span>
+</section>
+
+
+<script src="../ts/scripts/tab.ts"></script>

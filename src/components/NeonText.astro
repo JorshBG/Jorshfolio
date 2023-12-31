@@ -1,0 +1,16 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+}
+
+const { title, subtitle } = Astro.props;
+---
+
+<section class="neon-text w-full text-center mt-5 mb-2">
+  <p class="neon text-5xl">
+    {title}
+  </p>
+
+  {subtitle && <p class="neon text-xl">{subtitle}</p>}
+</section>
