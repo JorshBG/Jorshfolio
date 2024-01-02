@@ -1,9 +1,8 @@
 const projects: Array<Project> = [
   {
     name: "Cima",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam cum iure rerum maiores aspernatur aliquid dolor explicabo soluta distinctio doloribus, ipsum, reprehenderit repellendus excepturi a in perferendis nulla unde exercitationem.",
-    image: { src: "https://randomfox.ca/images/119.jpg", alt: "image" },
+    description: "projects.cima.description",
+    link: "https://github.com/Fabrica-de-Software-ISC/cima",
     technologies: [
       { name: "mdi:docker", tooltip: "Docker" },
       { name: "simple-icons:php", tooltip: "PHP v7.2" },
@@ -13,43 +12,38 @@ const projects: Array<Project> = [
     ],
   },
   {
-    name: "Access Control",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam cum iure rerum maiores aspernatur aliquid dolor explicabo soluta distinctio doloribus, ipsum, reprehenderit repellendus excepturi a in perferendis nulla unde exercitationem.",
-    image: { src: "https://randomfox.ca/images/82.jpg", alt: "image" },
+    name: "Mini Forms",
+    description: "projects.mini_forms.description",
+    link: "https://github.com/abnerlol68/mini_forms",
     technologies: [
       { name: "simple-icons:php", tooltip: "PHP 8.2" },
-      { name: "simple-icons:cplusplus", tooltip: "C++" },
-      { name: "simple-icons:arduino", tooltip: "Arduino" },
-      { name: "mdi:tailwind", tooltip: "Tailwind v3.4" },
-      { name: "simple-icons:sqlite", tooltip: "SQLite" },
+      { name: "simple-icons:javascript", tooltip: "JavaScript Vanilla" },
+      { name: "simple-icons:css3", tooltip: "CSS Vanilla" },
+      { name: "simple-icons:mysql", tooltip: "MySQL v8" },
     ],
   },
   {
     name: "Basic Paint",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam cum iure rerum maiores aspernatur aliquid dolor explicabo soluta distinctio doloribus, ipsum, reprehenderit repellendus excepturi a in perferendis nulla unde exercitationem.",
-    image: { src: "https://randomfox.ca/images/19.jpg", alt: "image" },
+    link: "https://github.com/JorshBG/Paint-Basic",
+    description: "projects.basic_paint.description",
     technologies: [
       { name: "mdi:language-csharp", tooltip: "C#" },
       { name: "simple-icons:dotnet", tooltip: "dotnet" },
     ],
   },
   {
-    name: "Kanban Board Client",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam cum iure rerum maiores aspernatur aliquid dolor explicabo soluta distinctio doloribus, ipsum, reprehenderit repellendus excepturi a in perferendis nulla unde exercitationem.",
-    image: { src: "https://randomfox.ca/images/90.jpg", alt: "image" },
+    name: "JorshFolio",
+    description: "projects.jorshfolio.description",
     technologies: [
-      { name: "simple-icons:react", tooltip: "ReactJS v18" },
-      { name: "simple-icons:vite", tooltip: "ViteJS" },
+      { name: "simple-icons:astro", tooltip: "Astro v4.0.3" },
+      { name: "simple-icons:typescript", tooltip: "TypeScript" },
+      { name: "simple-icons:tailwindcss", tooltip: "TailwindCSS v3.4.0" },
     ],
   },
   {
     name: "Kanban Board API",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam cum iure rerum maiores aspernatur aliquid dolor explicabo soluta distinctio doloribus, ipsum, reprehenderit repellendus excepturi a in perferendis nulla unde exercitationem.",
-    image: { src: "https://randomfox.ca/images/82.jpg", alt: "image" },
+    link: "https://github.com/JorshBG/kanban-boards-api",
+    description: "projects.kanban_api.description",
     technologies: [
       { name: "simple-icons:php", tooltip: "PHP 8.1" },
       { name: "mdi:laravel", tooltip: "Laravel v10" },
@@ -57,14 +51,13 @@ const projects: Array<Project> = [
     ],
   },
   {
-    name: "Mini Forms",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam cum iure rerum maiores aspernatur aliquid dolor explicabo soluta distinctio doloribus, ipsum, reprehenderit repellendus excepturi a in perferendis nulla unde exercitationem.",
-    image: { src: "https://randomfox.ca/images/82.jpg", alt: "image" },
+    name: "School Manager",
+    link: "https://github.com/JorshBG/school-manager",
+    description: "projects.school_manager.description",
     technologies: [
       { name: "simple-icons:php", tooltip: "PHP 8.1" },
       { name: "ic:outline-javascript", tooltip: "JavaScript Vanilla" },
-      { name: "mdi:bootstrap", tooltip: "Bootstrap 5" },
+      { name: "simple-icons:uikit", tooltip: "UiKit" },
       { name: "simple-icons:mysql", tooltip: "MySQL 8" },
     ],
   },

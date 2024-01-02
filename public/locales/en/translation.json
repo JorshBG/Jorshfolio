@@ -29,25 +29,137 @@
     "languages": "Technologies I use",
     "tools": "My toolkit"
   },
-  "projects":{
-    "tech" :{
+  "projects": {
+    "tech": {
       "used": "Used Techs",
-      "link":"Repository"
+      "link": "Repository"
     },
-    "title": "My projects"
+    "title": "My projects",
+    "miniforms":{
+      "description":"System to generate and administer surveys for educational purposes."
+    },
+    "cima":{
+      "description":"Manage school project evaluation attributes, generation of results documents and evaluation forms for users."
+    },
+    "basic_paint":{
+      "description":"This is a basic way to build a painting desktop application like Microsoft Paint; C# was used to develop this project."
+    },
+    "school_manager":{
+      "description":"A Web Application for the management of two services in a school: social service and professional practices; This project was worked with PHP and Javascript, and using Flight micro framework for routing in PHP."
+    },
+    "kanban_api":{
+      "description":"API to manage the resources of a project activity application for the customer to generate Kanban-style dashboards."
+    },
+    "jorshfolio":{
+      "description":"User portfolio using modern technologies to serve static pages."
+    }
   },
-  "tabs":{
-    "school":{
-      "title":"School"
+  "tabs": {
+    "school": {
+      "title": "School"
     },
-    "project":{
-      "title":"Projects"
+    "project": {
+      "title": "Projects"
     },
-    "certificates":{
-      "title":"Certificates"
+    "certificates": {
+      "title": "Certificates"
     },
-    "professionalexp":{
-      "title":"Professional experience"
+    "professionalexp": {
+      "title": "Professional experience"
+    }
+  },
+  "professional": {
+    "lang":{
+      "goals":"Achievements",
+      "stack":"My tech stack"
+    },
+    "job_1": {
+      "job_title": "Software developer",
+      "job_description": "I worked with several WEB applications, microservices and Software As A Service focused on security and data analysis such as Okta and Tableau respectively.",
+      "enterprise_name": "Turing-IA",
+      "year": "2023",
+      "time": "5 months",
+      "goals": {
+        "1": "I generated an API to send emails for the Newsletter.",
+        "2": "I linked the API with the web site pages I generated to automate the process of accessing Webinars.",
+        "3": "Using Okta, I set up test environments with SAML authentication with Tableau effective as a demonstration."
+      }
+    },
+    "job_2": {
+      "job_title": "WEB developer",
+      "job_description": "I built the WEB project that seeks to solve the problem of evaluation of school projects within the institute. I built a web client and an API to extend the service to other platforms.",
+      "enterprise_name": "ITSOEH",
+      "year": "2023",
+      "time": "7 months",
+      "goals": {
+        "1": "I managed to deploy an API to make the application use scalable.",
+        "2": "I implemented JWT for client-server authentication.",
+        "3": "I used PHP libraries to generate PDFs as final reports."
+      }
+    },
+    "job_3": {
+      "job_title": "Collaborator in WEB development",
+      "job_description": "I worked on the development of a web application for the administration of social service and professional practices of students.",
+      "enterprise_name": "ITSOEH",
+      "year": "2021",
+      "time": "3 months",
+      "goals": {
+        "1": "I was able to successfully migrate the application preview to Laravel for scalability.",
+        "2": "By optimizing the database I achieved a better access through store procedures and with ORM."
+      }
+    },
+    "job_4": {
+      "job_title": "Cashier",
+      "job_description": "General help for the first 3 weeks, then I was promoted to the position of cashier due to my customer service skills and my ability to handle stressful situations.",
+      "enterprise_name": "OXXO",
+      "year": "2019 - 2020"
+    },
+    "job_5": {
+      "job_title": "Librarian",
+      "job_description": "Assist library users in finding, checking out (borrowing) and receiving books. In addition, clean and organize the area.",
+      "enterprise_name": "Mixquiahuala's Public Library",
+      "year": "2017 - 2018"
+    }
+  },
+  "school":{
+    "lang":{
+        "current":"Current",
+        "social":"Socials"
+    },
+    "itsoeh":{
+      "date":"2020 - Current",
+      "name":"Higher Technological Institute of Western Hidalgo State (ITSOEH)",
+      "title":"Computer Systems Engineer"
+    },
+    "cetac":{
+      "date":"2016 - 2019",
+      "name":"Center for Technological Studies in Inland Waters 02 (CETAC 02)",
+      "title":"Electronics technician"
+    }
+  },
+  "certification":{
+    "lang":{
+      "link":"Badge"
+    },
+    "1":{
+      "title":"Scrum Foundation Professional Certification - SFPC™",
+      "from":"CertiProf"
+    },
+    "2":{
+      "title":"SCCNAv7: Networking introduction",
+      "from":"Cisco Networking Academy"
+    },
+    "3":{
+      "title":"Programming Foundations with JavaScript, HTML and CSS",
+      "from":"Duke University"
+    },
+    "4":{
+      "title":"Partner: NDG Linux Unhatched",
+      "from":"Cisco Networking Academy"
+    },
+    "5":{
+      "title":"Introduction to Cybersecurity",
+      "from":"Cisco Networking Academy"
     }
   }
 }

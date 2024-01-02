@@ -24,20 +24,39 @@ interface Project {
     name: string;
     description:string;
     technologies:Array<Tech>;
-    image:{src:string;alt:string}
+    link?:string;
 }
 
-interface ContentTabs {
+interface Tabs {
     name:string;
     id:string;
+    target:string;
+    default?:boolean;
 }
 
 interface ProExperience {
     enterprise_name:string;
     job_title:string;
-    date_start:string;
-    date_end:string;
+    year:string;
+    time?:string;
     job_description:string;
-    technologies:Array<Tech>;
-    goals:Array<string>;
+    technologies?:Array<Tech>;
+    goals?:Array<string>;
+}
+
+interface SchoolExperience {
+    date:string;
+    title_received:string;
+    school:{
+        name:string;
+        acronym:string;
+        web_site?:string;
+        facebook?:string;
+    }
+}
+
+interface Certification {
+    title:string;
+    from:string;
+    badge?:{link?:string, image?:{src:string, alt:string}}
 }

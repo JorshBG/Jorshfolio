@@ -1,0 +1,42 @@
+---
+import Icon from "astro-icon";
+import { t } from "i18next";
+interface Props {
+  certification: Certification;
+}
+
+const { certification } = Astro.props;
+---
+
+<div class="card">
+  <figure class="p-3 grid-col-1 grid">
+    <img
+      width="150"
+      class="rounded-md place-self-center"
+      src={certification.badge?.image?.src}
+      alt={certification.badge?.image?.alt}
+    />
+  </figure>
+  <article class="flex flex-col gap-3">
+    <h1 class="text-center font-bold text-black dark:text-white text-lg">
+      {t(certification.title)}
+    </h1>
+    <h3
+      class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 w-fit m-auto"
+    >
+      {t(certification.from)}
+    </h3>
+
+    {
+      certification.badge?.link && (
+        <a
+          href={certification.badge?.link}
+          class="flex flex-row gap-2 m-auto bg-black rounded-md px-2 py-1 dark:bg-white text-white dark:text-black w-fit"
+        >
+          <Icon name="ph:link-bold" width="25" />
+          {t("certification.lang.link")}
+        </a>
+      )
+    }
+  </article>
+</div>

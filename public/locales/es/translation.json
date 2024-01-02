@@ -29,25 +29,137 @@
     "languages": "Tecnologías que uso",
     "tools": "Mi conjunto de herramientas"
   },
-  "projects":{
-    "tech" :{
+  "projects": {
+    "tech": {
       "used": "Tecnologías usadas",
-      "link":"Repositorio"
+      "link": "Repositorio"
     },
-    "title": "Mis proyectos"
+    "title": "Mis proyectos",
+    "mini_forms":{
+      "description":"Sistema para generar y administrar encuestas con fines educativos."
+    },
+    "cima":{
+      "description":"Administrar atributos de evaluación de proyectos escolares, generación de documentos de resultados y formularios de evaluación para usuarios."
+    },
+    "basic_paint":{
+      "description":"Esta es una forma básica de construir una aplicación de escritorio de pintura como Microsoft Paint; C# se utilizó para desarrollar este proyecto."
+    },
+    "school_manager":{
+      "description":"Una Aplicación Web para la gestión de los dos servicios en una escuela: servicio social y prácticas profesionales; Este proyecto fue trabajado con PHP y Javascript, y utilizando Flight micro framework para enrutamiento en PHP."
+    },
+    "kanban_api":{
+      "description":"API para administrar los recursos de una aplicación de actividades de proyecto para que el cliente genere tableros al estilo de Kanban."
+    },
+    "jorshfolio":{
+      "description":"Porfolio de usuario usando tecnologías modernas para servir páginas estáticas."
+    }
   },
-  "tabs":{
-    "school":{
-      "title":"Eduacación"
+  "tabs": {
+    "school": {
+      "title": "Eduacación"
     },
-    "project":{
-      "title":"Proyectos"
+    "project": {
+      "title": "Proyectos"
     },
-    "certificates":{
-      "title":"Certificados"
+    "certificates": {
+      "title": "Certificados"
     },
-    "professionalexp":{
-      "title":"Experiencia profesional"
+    "professionalexp": {
+      "title": "Experiencia profesional"
+    }
+  },
+  "professional": {
+    "lang":{
+      "goals":"Logros",
+      "stack":"Tecnologías usadas"
+    },
+    "job_1": {
+      "job_title": "Desarrollador de Software",
+      "job_description": "Trabajé con diversas aplicaciones WEB, micro-servicios y Software As A Service enfocadas a la seguridad y análisis de datos como Okta y Tableau respectivamente.",
+      "enterprise_name": "Turing-IA",
+      "year": "2023",
+      "time": "5 meses",
+      "goals": {
+        "1": "Generé una API para enviar correos electrónicos para el Newsletter.",
+        "2": "Vinculé la API con las ventanas del sitio WEB que generé para automatizar el proceso de acceso a Webinars.",
+        "3": "Usando Okta, levanté entornos de prueba con autenticación SAML con Tableau efectivos como demostración."
+      }
+    },
+    "job_2": {
+      "job_title": "Desarrollador WEB",
+      "job_description": "Construí el proyecto WEB que busca resolver la problemática de evaluación de proyectos escolares dentro del instituto. Construí un cliente web y una API para extender el servicio a otras plataformas.",
+      "enterprise_name": "ITSOEH",
+      "year": "2023",
+      "time": "7 meses",
+      "goals": {
+        "1": "Logré desplegar una API para hacer escalable el uso de la aplicación.",
+        "2": "Implementé JWT para la autenticación entre cliente-servidor.",
+        "3": "Usé bibliotecas en PHP para generar PDFs como reportes finales."
+      }
+    },
+    "job_3": {
+      "job_title": "Colaborador en desarrollo WEB",
+      "job_description": "Trabajé en el desarrollo de una aplicación WEB para la administración de servicio social y prácticas profesionales de los estudiantes.",
+      "enterprise_name": "ITSOEH",
+      "year": "2021",
+      "time": "3 meses",
+      "goals": {
+        "1": "Pude migrar exitosamente el avance de la aplicación a Laravel para obtener escalabilidad.",
+        "2": "Al optimizar la base de datos logré un mejor acceso mediante procedimientos de almacenado y con ORM."
+      }
+    },
+    "job_4": {
+      "job_title": "Cajero",
+      "job_description": "Auxiliar general durante las primeras 3 semanas, después fui ascendido al puesto de cajero debido a mis habilidades de servicio al cliente y mi capacidad para manejar situaciones estresantes.",
+      "enterprise_name": "OXXO",
+      "year": "2019 - 2020"
+    },
+    "job_5": {
+      "job_title": "Bibliotecario",
+      "job_description": "Ayudar a los usuarios de la biblioteca a encontrar, dar salida (prestamos) y recepción libros. Además, limpiar y organizar el área.",
+      "enterprise_name": "Biblioteca Pública de Mixquiahuala",
+      "year": "2017 - 2018"
+    }
+  },
+  "school":{
+    "lang":{
+        "current":"Cursando",
+        "social":"Redes sociales"
+    },
+    "itsoeh":{
+      "date":"2020 - Actual",
+      "name":"Instituto Tecnológico Superior del Occidente del Estado de Hidalgo (ITSOEH)",
+      "title":"Ingeniero en Sistemas Computacionales"
+    },
+    "cetac":{
+      "date":"2016 - 2019",
+      "name":"Centro de Estudios Tecnológicos en Aguas Continentales 02 (CETAC 02)",
+      "title":"Técnico en Electrónica"
+    }
+  },
+  "certification":{
+    "lang":{
+      "link":"Insignia"
+    },
+    "1":{
+      "title":"Certificación profesional de la Fundación Scrum - SFPC™.",
+      "from":"CertiProf"
+    },
+    "2":{
+      "title":"CCNAv7: Introducción a las redes",
+      "from":"Cisco Networking Academy"
+    },
+    "3":{
+      "title":"Fundamentos de programación con JavaScript, HTML y CSS",
+      "from":"Duke University"
+    },
+    "4":{
+      "title":"Partner: NDG Linux Unhatched",
+      "from":"Cisco Networking Academy"
+    },
+    "5":{
+      "title":"Introducción a la ciberseguridad",
+      "from":"Cisco Networking Academy"
     }
   }
 }

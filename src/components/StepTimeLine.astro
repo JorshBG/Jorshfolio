@@ -1,0 +1,58 @@
+---
+import Icon from "astro-icon";
+import { t } from "i18next";
+interface Props {
+  experience: ProExperience;
+}
+
+const { experience } = Astro.props;
+---
+
+<li class="mb-10 ms-4">
+  <div
+    class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+  >
+  </div>
+  <time
+    class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+    >{t(experience.year)}{
+      experience.time ? " | ".concat(t(experience.time)) : ""
+    }</time
+  >
+  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+    {t(experience.job_title)}
+  </h3>
+  <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+    {t(experience.job_description)}
+  </p>
+  {
+    experience.goals && (
+      <>
+        <p class="text-base font-normal ml-10 text-gray-500 dark:text-gray-400">
+          {t("professional.lang.goals")}
+        </p>
+        <ul class="mb-4 ml-3 text-base font-normal text-gray-500 dark:text-gray-400 list-inside list-disc">
+          {experience.goals.map((goal) => {
+            return <li>{t(goal)}</li>;
+          })}
+        </ul>
+      </>
+    )
+  }
+  {
+    experience.technologies && (
+      <div class="flex flex-row flex-wrap gap-4">
+        <p class="text-base font-normal ml-10 text-gray-500 dark:text-gray-400">
+          {t("professional.lang.stack")}
+        </p>
+        {experience.technologies.map((tech) => {
+          return (
+            <span title={tech.tooltip} data-tooltip-placement="bottom">
+              <Icon name={tech.name} width="25" />
+            </span>
+          );
+        })}
+      </div>
+    )
+  }
+</li>

@@ -1,7 +1,7 @@
 ---
 import {t} from 'i18next'
 interface Props {
-  tabs: Array<{ name: string; id: string }>;
+  tabs: Array<Tabs>;
 }
 
 const { tabs } = Astro.props;
@@ -13,7 +13,7 @@ const { tabs } = Astro.props;
     {
       tabs.map((tab) => {
         return (
-          <div id={tab.id} class="card tab cursor-pointer text-lg font-semibold">
+          <div id={tab.id} class="card tab cursor-pointer text-lg font-semibold" data-target={tab.target} data-default={tab.default?"true":"false"}>
             {t(tab.name)}
           </div>
         );
