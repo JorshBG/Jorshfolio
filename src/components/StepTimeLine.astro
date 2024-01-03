@@ -33,7 +33,7 @@ const { experience } = Astro.props;
         </p>
         <ul class="mb-4 ml-3 text-base font-normal text-gray-500 dark:text-gray-300 list-inside list-disc">
           {experience.goals.map((goal) => {
-            return <li>{t(goal)}</li>;
+            return <li class="mb-1 last:mb-0">{t(goal)}</li>;
           })}
         </ul>
       </>
