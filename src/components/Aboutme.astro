@@ -7,27 +7,27 @@ import "../sass/main.scss";
 // import "../js/cards";
 ---
 
-<div class="mx-5 my-2 mt-5 grid grid-cols-contact_me gap-4 xl:gap-2 md:gap-1">
-  <div class="image card">
-    <img src="/public/img/toji.png" alt="toji" />
+<div class="mx-5 my-2 mt-5 grid grid-cols-contact_me gap-4 xl:gap-2 lg:flex lg:flex-col-reverse">
+  <div class="image card lg:flex lg:justify-center">
+    <img src="/public/img/toji.png" alt="toji" class="lg:w-2/4"/>
   </div>
 
   <div
     class="text flex flex-col gap-y-4 hover:shadow-gray-200/60 hover:shadow-lg card"
   >
-    <div class="title mb-5">
+    <div class="title mb-5 lg:mb-0">
       <h1
-        class="mb-2 text-center font-bold text-4xl xl:text-3xl md:text-2xl border border-x-0 border-t-0 border-b-purple-600 border-b-2"
+        class="mb-2 text-center font-bold text-4xl xl:text-3xl md:text-2xl sm:text-xl border border-x-0 border-t-0 border-b-secondary border-b-2"
       >
         {t("about.head.name")}
       </h1>
-      <p class="text-center text-purple-300 -mt-2 font-bold">
+      <p class="text-center text-primary -mt-2 font-bold sm:text-sm">
         {t("about.head.title")}
       </p>
     </div>
 
-    <div class="description">
-      <p class="text-center font-bold leading-10 text-xl xl:text-lg md:text-sm">
+    <div class="description sm:mb-2">
+      <p class="text-center font-bold leading-10 text-xl xl:text-lg lg:text-2xl md:text-xl ">
         <Trans i18nKey="about.body.description">
           <span class="text-primary">¡Hola!</span> Soy un apasionado por la
           <span class="text-secondary">&nbsp;programación</span>
@@ -43,7 +43,7 @@ import "../sass/main.scss";
     </div>
 
     <div
-      class="contact_me grid grid-cols-2 justify-items-center px-10 items-center"
+      class="contact_me grid grid-cols-2 justify-items-center px-10 items-center lg:grid-cols-1 lg:gap-3"
     >
       <div class="cv">
         <a
@@ -55,8 +55,8 @@ import "../sass/main.scss";
         </a>
       </div>
 
-      <div class="social">
-        <p class="text-primary text-xl mb-2 font-semibold">
+      <div class="social sm:mt-2">
+        <p class="text-primary text-xl text-center mb-2 font-semibold sm:text-base">
           {t("about.body.findme")}
         </p>
         <div class="icons flex flex-row gap-x-2">
