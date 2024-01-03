@@ -33,7 +33,7 @@ function rotateToMouse(e, card) {
   const distance = Math.sqrt(center.x ** 2 + center.y ** 2);
 
   element.style.transform = `
-  scale3d(1.07, 1.07, 1.07)
+  scale3d(1.015, 1.015, 1.015)
   rotate3d(
     ${center.y / 100},
     ${-center.x / 100},

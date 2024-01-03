@@ -2,6 +2,7 @@
 import { Icon } from "astro-icon";
 import { Image } from "astro:assets";
 import { t } from "i18next";
+import technologies from "../ts/export/technologies";
 interface Props {
   project: Project;
 }
@@ -44,7 +45,7 @@ const { project } = Astro.props;
         }
       </div>
       <a
-        href="#"
+        href={project.link}
         class="bg-black dark:bg-white rounded-md px-2 py-1 text-white dark:text-black flex flex-row gap-1 font-semibold items-center w-fit self-center"
       >
         <Icon name="mdi:github" class="text-white dark:text-black" width="30" />

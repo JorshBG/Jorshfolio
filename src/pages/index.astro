@@ -13,16 +13,18 @@ import Professional from "../components/Professional.astro";
 import SchoolTimeLine from "../components/SchoolTimeLine.astro";
 import Certification from "../components/Certification.astro";
 import certifications from "../ts/export/certifications";
+import Background from "../components/Background.astro";
 
 changeLanguage("es");
 ---
 
 <Layout>
+  
   <About />
   <Tech />
   <Tabs tabs={ContentTabs}/>
   <!-- <NeonText title={t("projects.title")} /> -->
-  <div class="grid grid-cols-2 tab-content hidden" id="projects">
+  <div class="grid grid-cols-2 mb-5 tab-content hidden" id="projects">
     {
       projects.map((project) => {
         return (
@@ -35,7 +37,7 @@ changeLanguage("es");
   </section>
   <Professional/>
   <SchoolTimeLine/>
-  <div class="grid grid-cols-2 mt-6 mx-5 gap-4 tab-content hidden" id="certificates">
+  <div class="grid grid-cols-2 mt-6 mb-5 mx-5 gap-4 tab-content hidden" id="certificates">
     {
       certifications.map(certification => {
         return <Certification certification={certification}/>
@@ -43,5 +45,4 @@ changeLanguage("es");
     }
   </div>
   <Config />
-  <hr class="mb-5 mt-2 shadow-md shadow-white"/>
 </Layout>

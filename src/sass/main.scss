@@ -1,6 +1,6 @@
 // main
 
-$primary: #00A3FF;
+$primary: #00a3ff;
 
 // Dark
 
@@ -20,7 +20,6 @@ $card-shadow-light: #0000005f;
 $card-shadow-hover-light: rgba(95, 95, 95, 0.6);
 $card-bg-light: #fff;
 
-
 .card {
   padding: 1.25rem;
   border-radius: 0.375rem;
@@ -28,14 +27,14 @@ $card-bg-light: #fff;
   transition-duration: 300ms;
   transition-property: transform, box-shadow;
   transition-timing-function: ease-out;
-  transform: rotate3d(0);
+  // transform: rotate3d(0);
   &:hover {
     transition-duration: 150ms;
   }
 }
 
 .tab {
-  &.active{
+  &.active {
     background-color: $primary;
   }
 }
@@ -43,7 +42,7 @@ $card-bg-light: #fff;
 :is(:where([data-mode="dark"]) .card) {
   background-color: $card-bg-dark;
   box-shadow: 0 5px 5px $card-shadow-dark;
-  &:hover{
+  &:hover {
     box-shadow: 0 5px 20px 5px $card-shadow-hover-dark;
   }
 }
@@ -51,7 +50,7 @@ $card-bg-light: #fff;
 :is(:where([data-mode="light"]) .card) {
   background-color: $card-bg-light;
   box-shadow: 0 5px 5px $card-shadow-light;
-  &:hover{
+  &:hover {
     box-shadow: 0 5px 20px 5px $card-shadow-hover-light;
   }
 }
@@ -63,26 +62,34 @@ $card-bg-light: #fff;
   animation: animation-neon 1s ease-in-out infinite alternate;
 }
 
-
 @keyframes animation-neon {
   from {
-    text-shadow: 0 0 10px $text-shadow-three-dark, 0 0 20px $text-shadow-three-dark, 0 0 30px $text-shadow-one-dark,
-      0 0 40px $text-shadow-one-dark, 0 0 50px $text-shadow-one-dark, 0 0 60px $text-shadow-one-dark, 0 0 70px $text-shadow-one-dark;
+    text-shadow: 0 0 10px $text-shadow-three-dark,
+      0 0 20px $text-shadow-three-dark, 0 0 30px $text-shadow-one-dark,
+      0 0 40px $text-shadow-one-dark, 0 0 50px $text-shadow-one-dark,
+      0 0 60px $text-shadow-one-dark, 0 0 70px $text-shadow-one-dark;
   }
   to {
-    text-shadow: 0 0 20px $text-shadow-three-dark, 0 0 30px $text-shadow-two-dark, 0 0 40px $text-shadow-two-dark,
-      0 0 50px $text-shadow-two-dark, 0 0 60px $text-shadow-two-dark, 0 0 70px $text-shadow-two-dark, 0 0 80px $text-shadow-two-dark;
+    text-shadow: 0 0 20px $text-shadow-three-dark,
+      0 0 30px $text-shadow-two-dark, 0 0 40px $text-shadow-two-dark,
+      0 0 50px $text-shadow-two-dark, 0 0 60px $text-shadow-two-dark,
+      0 0 70px $text-shadow-two-dark, 0 0 80px $text-shadow-two-dark;
   }
 }
-
 
 @-webkit-keyframes animation-neon {
   from {
-    text-shadow: 0 0 10px $text-shadow-three-dark, 0 0 20px $text-shadow-three-dark, 0 0 30px $text-shadow-one-dark,
-      0 0 40px $text-shadow-one-dark, 0 0 50px $text-shadow-one-dark, 0 0 60px $text-shadow-one-dark, 0 0 70px $text-shadow-one-dark;
+    text-shadow: 0 0 10px $text-shadow-three-dark,
+      0 0 20px $text-shadow-three-dark, 0 0 30px $text-shadow-one-dark,
+      0 0 40px $text-shadow-one-dark, 0 0 50px $text-shadow-one-dark,
+      0 0 60px $text-shadow-one-dark, 0 0 70px $text-shadow-one-dark;
   }
   to {
-    text-shadow: 0 0 20px $text-shadow-three-dark, 0 0 30px $text-shadow-two-dark, 0 0 40px $text-shadow-two-dark,
-      0 0 50px $text-shadow-two-dark, 0 0 60px $text-shadow-two-dark, 0 0 70px $text-shadow-two-dark, 0 0 80px $text-shadow-two-dark;
+    text-shadow: 0 0 20px $text-shadow-three-dark,
+      0 0 30px $text-shadow-two-dark, 0 0 40px $text-shadow-two-dark,
+      0 0 50px $text-shadow-two-dark, 0 0 60px $text-shadow-two-dark,
+      0 0 70px $text-shadow-two-dark, 0 0 80px $text-shadow-two-dark;
   }
 }
+
+@import './background_stars.scss'

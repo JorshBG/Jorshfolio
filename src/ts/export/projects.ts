@@ -39,6 +39,7 @@ const projects: Array<Project> = [
       { name: "simple-icons:typescript", tooltip: "TypeScript" },
       { name: "simple-icons:tailwindcss", tooltip: "TailwindCSS v3.4.0" },
     ],
+    link:"https://github.com/JorshBG/Jorshfolio"
   },
   {
     name: "Kanban Board API",

@@ -5,6 +5,7 @@ import i18next, { t, changeLanguage } from "i18next";
 import Styles from "../sass/styles.scss";
 import { Trans, LanguageSelector } from "astro-i18next/components";
 import { Tooltips } from "astro-tooltips";
+import Background from "../components/Background.astro";
 ---
 
 <!doctype html>
@@ -25,7 +26,10 @@ import { Tooltips } from "astro-tooltips";
   <body
     class="bg-white text-black dark:text-white dark:bg-black font-lato max-w-5xl lg:max-w-3xl md:max-w-xl m-auto"
   >
-    <slot />
+  <Background/>
+    <div class="overflow-x-hidden h-dvh">
+      <slot />
+    </div>
     <script src="/public/assets/js/main.js" is:inline></script>
   </body>
 </html>
