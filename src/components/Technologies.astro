@@ -5,19 +5,19 @@ import tools from "../ts/export/tools";
 import technologies from "../ts/export/technologies";
 ---
 
-<div class="grid grid-cols-2 mt-5 mx-5 gap-4 xl:gap-2 md:gap-1">
+<div class="grid grid-cols-2 mt-5 mx-5 gap-4 xl:gap-2 lg:grid-cols-1 lg:gap-4">
   <div class="card">
     <div class="my-tech flex flex-col gap-y-10">
       <div class="tools flex flex-col gap-y-4">
         <div class="header grid justify-items-end">
-          <div class="text-xl font-semibold text-secondary text-right grid">
+          <div class="text-xl font-semibold text-secondary text-right grid sm:text-base">
             {t("technologies.tools")}
             <span
               class="border border-primary border-solid w-[50%] justify-self-end"
             ></span>
           </div>
         </div>
-        <div class="content flex flex-row flex-wrap gap-5 m-auto my-5">
+        <div class="content flex flex-row flex-wrap gap-5 m-auto my-5 sm:my-0 justify-center">
           {
             tools &&
               tools.map(({ name, iconName }) => {
@@ -25,9 +25,8 @@ import technologies from "../ts/export/technologies";
                   <span title={name ?? ""} data-tooltip-placement="bottom">
                     <Icon
                       name={iconName}
-                      width="70"
                       class={
-                        "text-gray-600 dark:text-white hover:text-primary hover:ease-in-out hover:duration-700"
+                        "text-gray-600 dark:text-white hover:text-primary hover:ease-in-out hover:duration-700 w-[70px] lg:w-[55px] sm:w-[40px]" 
                       }
                     />
                   </span>
@@ -43,14 +42,14 @@ import technologies from "../ts/export/technologies";
     <div class="my-tech flex flex-col gap-y-10">
       <div class="tools flex flex-col gap-y-4">
         <div class="header grid justify-items-end">
-          <div class="text-xl font-semibold text-secondary text-right grid">
+          <div class="text-xl font-semibold text-secondary text-right grid sm:text-base">
             {t("technologies.languages")}
             <span
               class="border border-primary border-solid w-[50%] justify-self-end"
             ></span>
           </div>
         </div>
-        <div class="content flex flex-row flex-wrap gap-5 m-auto my-5">
+        <div class="content flex flex-row flex-wrap gap-5 m-auto my-5 sm:my-0 justify-center">
           {
             technologies &&
               technologies.map(({ name, iconName }) => {
@@ -58,9 +57,9 @@ import technologies from "../ts/export/technologies";
                   <span title={name} data-tooltip-placement="bottom">
                     <Icon
                       name={iconName}
-                      width="70"
+                      
                       class={
-                        "text-gray-600 dark:text-white hover:text-primary hover:ease-in-out hover:duration-700"
+                        "text-gray-600 dark:text-white hover:text-primary hover:ease-in-out hover:duration-700 w-[70px] lg:w-[55px] sm:w-[40px]"
                       }
                     />
                   </span>
