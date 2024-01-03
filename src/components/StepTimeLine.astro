@@ -22,16 +22,16 @@ const { experience } = Astro.props;
   <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
     {t(experience.job_title)}
   </h3>
-  <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+  <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-200">
     {t(experience.job_description)}
   </p>
   {
     experience.goals && (
       <>
-        <p class="text-base font-normal ml-10 text-gray-500 dark:text-gray-400">
+        <p class="text-base font-normal text-center text-gray-500 dark:text-gray-200">
           {t("professional.lang.goals")}
         </p>
-        <ul class="mb-4 ml-3 text-base font-normal text-gray-500 dark:text-gray-400 list-inside list-disc">
+        <ul class="mb-4 ml-3 text-base font-normal text-gray-500 dark:text-gray-300 list-inside list-disc">
           {experience.goals.map((goal) => {
             return <li>{t(goal)}</li>;
           })}
@@ -41,17 +41,19 @@ const { experience } = Astro.props;
   }
   {
     experience.technologies && (
-      <div class="flex flex-row flex-wrap gap-4">
-        <p class="text-base font-normal ml-10 text-gray-500 dark:text-gray-400">
+      <div class="flex flex-col flex-wrap gap-4">
+        <p class="text-base font-normal text-center text-gray-500 dark:text-gray-200">
           {t("professional.lang.stack")}
         </p>
-        {experience.technologies.map((tech) => {
-          return (
-            <span title={tech.tooltip} data-tooltip-placement="bottom">
-              <Icon name={tech.name} width="25" />
-            </span>
-          );
-        })}
+        <div class="flex flex-row flex-wrap gap-4 justify-center">
+          {experience.technologies.map((tech) => {
+            return (
+              <span title={tech.tooltip} data-tooltip-placement="bottom">
+                <Icon name={tech.name} width="25" />
+              </span>
+            );
+          })}
+        </div>
       </div>
     )
   }
