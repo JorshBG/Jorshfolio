@@ -4,13 +4,13 @@ import {t, changeLanguage} from 'i18next'
 ---
 
 <div
-        class="fixed bottom-0 ml-4 mb-8 rounded-full dark:bg-gradient-to-l dark:from-slate-950 dark:to-slate-600 dark:shadow-md dark:shadow-primary p-2 xl:p-1 cursor-pointer"
+        class="fixed bottom-0 ml-4 mb-8 rounded-full bg-gradient-to-l from-orange-400 to-amber-200 dark:from-slate-950 dark:to-slate-600 dark:shadow-md dark:shadow-primary p-2 xl:p-1 cursor-pointer"
 >
     <div
             class="fixed content-menu w-auto -mt-24 grid-cols-2 grid hidden"
             id="options"
     >
-        <div class="menus dark:bg-slate-800 p-2 rounded-md flex flex-col gap-2">
+        <div class="menus bg-orange-100 dark:bg-slate-800 p-2 rounded-md flex flex-col gap-2">
             <div class="text-md font-semibold">
                 <div
                         class="heading-group flex flex-row"
@@ -21,7 +21,7 @@ import {t, changeLanguage} from 'i18next'
                     <Icon name="ic:round-arrow-right" class="flex-none w-6"/>
                 </div>
             </div>
-            <hr/>
+            <span class="h-[1px] bg-orange-700 w-full dark:bg-primary"></span>
             <div class="text-md font-semibold">
                 <div
                         class="heading-group flex flex-row"
@@ -35,77 +35,21 @@ import {t, changeLanguage} from 'i18next'
             </div>
         </div>
         <div class="menus bg-transparent p-1 rounded-md flex-col gap-2 hidden" id="selections">
-            <div class="text-md dark:bg-slate-800 p-1 rounded-md font-semibold flex-col gap-y-1 hidden" data-option="theme" id="options-theme">
-                <span class="toggle-theme hover:bg-slate-700 rounded-md px-1" data-change-theme="dark" >{t("config.themes.dark")}</span>
-                <span class="toggle-theme hover:bg-slate-700 rounded-md px-1" data-change-theme="light" >{t("config.themes.light")}</span>
+            <div class="text-md bg-orange-100 dark:bg-slate-800 p-1 rounded-md font-semibold flex-col gap-y-1 hidden" data-option="theme" id="options-theme">
+                <span class="toggle-theme hover:bg-orange-400 dark:hover:bg-slate-700 rounded-md px-1" data-change-theme="dark" >{t("config.themes.dark")}</span>
+                <span class="toggle-theme hover:bg-orange-400 dark:hover:bg-slate-700 rounded-md px-1" data-change-theme="light" >{t("config.themes.light")}</span>
             </div>
-            <div class="text-md dark:bg-slate-800 p-1 rounded-md font-semibold flex-col gap-y-1 hidden" data-option="language" id="options-lang">
-                <span class="toggle-lang hover:bg-slate-700 rounded-md px-1"  data-change-language="es">{t("config.language.es")}</span>
-                <span class="toggle-lang hover:bg-slate-700 rounded-md px-1"  data-change-language="en">{t("config.language.en")}</span>
+            <div class="text-md bg-orange-100 dark:bg-slate-800 p-1 rounded-md font-semibold flex-col gap-y-1 hidden" data-option="language" id="options-lang">
+                <span class="toggle-lang hover:bg-orange-400 dark:hover:bg-slate-700 rounded-md px-1"  data-change-language="es">{t("config.language.es")}</span>
+                <span class="toggle-lang hover:bg-orange-400 dark:hover:bg-slate-700 rounded-md px-1"  data-change-language="en">{t("config.language.en")}</span>
             </div>
         </div>
 
     </div>
     <Icon
             name="fe:gear"
-            class="w-10 lg:w-8"
+            class="w-10 lg:w-8 dark:text-white text-slate-100"
             data-toggle="toggle-options"
             data-target="#options"
     />
 </div>
-
-<script is:inline>
-
-    const themeOptions = document.querySelectorAll('.toggle-theme')
-    themeOptions?.forEach(option => {
-        option.addEventListener('click', () => {
-            document.querySelector('html')?.setAttribute('data-mode', option.getAttribute('data-change-theme'))
-        })
-    })
-
-    const menus = document.querySelectorAll('[data-menu]')
-    menus?.forEach(menu => {
-        menu.addEventListener('click', () => {
-            const theme = document.querySelector('#options-theme')
-            const lang = document.querySelector('#options-lang')
-            if(!theme?.classList.contains('hidden')){
-                theme?.classList.add('hidden')
-            }
-            if(!lang?.classList.contains('hidden')){
-                lang?.classList.add('hidden')
-            }
-            const options = document.querySelector('#options')
-            const selections = document.querySelector('#selections')
-            // options?.classList.toggle('hidden')
-            selections?.classList.toggle('hidden')
-            const set = document.querySelector(`#${menu.getAttribute('data-target')}`)
-            set?.classList.remove('hidden')
-            set?.classList.add('flex')
-        })
-    })
-
-
-    const toggleOptions = document.querySelector('[data-toggle="toggle-options"]');
-    toggleOptions?.addEventListener("click", () => {
-        const target = document.querySelector(
-            `${toggleOptions.getAttribute("data-target")}`
-        );
-        target?.classList.toggle("hidden");
-    });
-
-    const togglersLang = document.querySelectorAll('.toggle-lang');
-    togglersLang?.forEach(toggle => {
-        toggle.addEventListener('click', () => {
-            document.querySelector('#options')?.classList.add('hidden')
-            document.querySelector('#options-theme')?.classList.add('hidden')
-            document.querySelector('#options-lang')?.classList.add('hidden')
-            document.querySelector('#selections')?.classList.add('hidden')
-            if(toggle.getAttribute('data-change-language') === 'en' && window.location.pathname !== '/en') {
-                window.location.href = '/en'
-            } else if(toggle.getAttribute('data-change-language') === 'es' && window.location.pathname !== '/'){
-                window.location.href = '/'
-            }
-            localStorage.setItem('language', toggle.getAttribute('data-change-language'));
-        })
-    })
-</script>

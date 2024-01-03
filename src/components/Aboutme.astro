@@ -4,7 +4,6 @@ import { t, changeLanguage } from "i18next";
 import { Trans, LanguageSelector } from "astro-i18next/components";
 import icons from "../ts/export/socials";
 import "../sass/main.scss";
-// import "../js/cards";
 ---
 
 <div class="mx-5 my-2 mt-5 grid grid-cols-contact_me gap-4 xl:gap-2 lg:flex lg:flex-col-reverse">
@@ -47,9 +46,9 @@ import "../sass/main.scss";
     >
       <div class="cv">
         <a
-          class="bg-primary font-semibold rounded-md py-2 px-4 cursor-pointer text-xl"
-          href="/public/files/cv.pdf"
-          download="Jordi-Garcia-CV"
+          class="bg-primary text-white font-semibold rounded-md py-2 px-4 cursor-pointer text-xl"
+          href={t("about.body.pdf_link")}
+          download="Jordi Yair Calva Garcia - CV"
         >
           {t("about.body.cv-button")}
         </a>
@@ -59,7 +58,7 @@ import "../sass/main.scss";
         <p class="text-primary text-xl text-center mb-2 font-semibold sm:text-base">
           {t("about.body.findme")}
         </p>
-        <div class="icons flex flex-row gap-x-2">
+        <div class="icons flex flex-row gap-x-2 ">
           {
             icons &&
               icons.map(({ link, iconName }) => {
@@ -68,7 +67,7 @@ import "../sass/main.scss";
                     <Icon
                       name={iconName}
                       width="30"
-                      class="hover:text-primary hover:ease-in-out hover:duration-700"
+                      class="hover:text-primary hover:ease-in-out hover:duration-700 text-slate-700 dark:text-white"
                     />
                   </a>
                 );

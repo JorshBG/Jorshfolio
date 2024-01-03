@@ -8,7 +8,7 @@
   right: 0;
 }
 
-.stars {
+:is(:where([data-mode="dark"]) .stars){
   background-image: radial-gradient(
       2px 2px at 20px 30px,
       #eee,
@@ -19,6 +19,22 @@
     radial-gradient(2px 2px at 90px 40px, #fff, rgba(0, 0, 0, 0)),
     radial-gradient(2px 2px at 130px 80px, #fff, rgba(0, 0, 0, 0)),
     radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0, 0, 0, 0));
+}
+
+:is(:where([data-mode="light"]) .stars){
+  background-image: radial-gradient(
+      2px 2px at 20px 30px,
+      #eee,
+      rgba(0, 0, 0, 0)
+    ),
+    radial-gradient(2px 2px at 40px 70px, $tooltip-border-light, rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 50px 160px, $tooltip-bg-light, rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 90px 40px, $tooltip-border-light, rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 130px 80px, $tooltip-border-light, rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 160px 120px, $tooltip-bg-light, rgba(0, 0, 0, 0));
+}
+
+.stars {
   background-repeat: repeat;
   background-size: 200px 200px;
   animation: zoom 10s infinite;

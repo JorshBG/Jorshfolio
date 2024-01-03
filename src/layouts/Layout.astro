@@ -21,15 +21,15 @@ import Background from "../components/Background.astro";
     />
 
     <title>JorshFolio</title>
-    <Tooltips interactive={false} delay={[15, 400]} />
+    <Tooltips interactive={false} delay={[15, 400]} theme={'dark'} />
   </head>
   <body
-    class="bg-white text-black dark:text-white dark:bg-black font-lato max-w-5xl lg:max-w-3xl md:max-w-xl m-auto"
+    class="bg-[rgb(240,240,240)] text-black dark:text-white dark:bg-black font-lato max-w-5xl lg:max-w-3xl md:max-w-xl m-auto"
   >
     <Background />
     <div class="overflow-x-hidden h-dvh relative main">
       <slot />
     </div>
-    <script src="/public/assets/js/main.js" is:inline></script>
+    <script src="../ts/scripts/main.ts"></script>
   </body>
 </html>

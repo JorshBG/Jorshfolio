@@ -4,6 +4,10 @@ $primary: #00a3ff;
 
 // Dark
 
+$tooltip-bg-dark: rgb(51 65 85);
+$tooltip-border-dark: rgb(15 23 42);
+$tooltip-text-dark: white;
+
 $text-shadow-one-dark: #3b3b3b;
 $text-shadow-two-dark: #828282;
 $text-shadow-three-dark: #fff;
@@ -16,10 +20,13 @@ $text-shadow-one-light: #3b3b3b;
 $text-shadow-two-light: #828282;
 $text-shadow-three-light: #fff;
 
-$card-shadow-light: #0000005f;
-$card-shadow-hover-light: rgba(95, 95, 95, 0.6);
-$card-bg-light: #fff;
+$tooltip-bg-light: rgb(255 237 213);
+$tooltip-border-light: rgb(249 115 22);
+$tooltip-text-light: black;
 
+$card-shadow-light: rgba(249, 116, 22, 0.251);
+$card-shadow-hover-light: rgba(0, 163, 255, 0.6);
+$card-bg-light: #ffffff84;
 
 // scroll bar
 
@@ -34,7 +41,7 @@ $card-bg-light: #fff;
 .main::-webkit-scrollbar-thumb {
   background-color: $primary; /* color del botón de desplazamiento */
   border-radius: 20px; /* redondez del botón de desplazamiento */
-  border: none /* crea un borde alrededor del botón de desplazamiento */
+  border: none; /* crea un borde alrededor del botón de desplazamiento */
 }
 
 // end scrollbar
@@ -55,6 +62,7 @@ $card-bg-light: #fff;
 .tab {
   &.active {
     background-color: $primary;
+    color: white;
   }
 }
 
@@ -111,4 +119,22 @@ $card-bg-light: #fff;
   }
 }
 
-@import './background_stars.scss'
+.tippy-box {
+  border-radius: 0.375rem;
+  padding: 0rem;
+  word-wrap: break-word;
+  font-weight: bold;
+
+  &[data-theme="dark"] {
+    background-color: $tooltip-bg-dark;
+    color: $tooltip-text-dark;
+    border: 1px solid $tooltip-border-dark;
+  }
+  &[data-theme="light"] {
+    background-color: $tooltip-bg-light;
+    color: $tooltip-text-light;
+    border: 1px solid $tooltip-border-light;
+  }
+}
+
+@import "./background_stars.scss";
