@@ -20,6 +20,25 @@ $card-shadow-light: #0000005f;
 $card-shadow-hover-light: rgba(95, 95, 95, 0.6);
 $card-bg-light: #fff;
 
+
+// scroll bar
+
+.main::-webkit-scrollbar {
+  width: 4px; /* ancho de toda la barra de desplazamiento */
+}
+
+.main::-webkit-scrollbar-track {
+  background: transparent; /* color del área de seguimiento */
+}
+
+.main::-webkit-scrollbar-thumb {
+  background-color: $primary; /* color del botón de desplazamiento */
+  border-radius: 20px; /* redondez del botón de desplazamiento */
+  border: none /* crea un borde alrededor del botón de desplazamiento */
+}
+
+// end scrollbar
+
 .card {
   padding: 1.25rem;
   border-radius: 0.375rem;
