@@ -9,11 +9,11 @@ const { tabs } = Astro.props;
 
 <section class="mx-5 mt-4">
   <span class="border border-primary neon w-full block"></span>
-  <div class="tabs flex mt-2 flex-row flex-wrap justify-center gap-4">
+  <div class="tabs flex mt-2 flex-row flex-wrap justify-center gap-4 sm:gap-3">
     {
       tabs.map((tab) => {
         return (
-          <div id={tab.id} class="card tab cursor-pointer text-lg font-semibold" data-target={tab.target} data-default={tab.default?"true":"false"}>
+          <div id={tab.id} class="sm:text-base card tab cursor-pointer text-lg font-semibold" data-target={tab.target} data-default={tab.default?"true":"false"}>
             {t(tab.name)}
           </div>
         );
