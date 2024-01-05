@@ -1,12 +1,11 @@
+// import type { AstroI18nextConfig } from "astro-i18next";
 
-import type { AstroI18nextConfig } from "astro-i18next";
-
-const config: AstroI18nextConfig = {
+const config = {
   defaultLocale: "es",
   locales: ["es", "en"],
   i18nextServer: {
     debug: true,
   },
-};
+}
 
 export default config;
