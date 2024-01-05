@@ -6,7 +6,7 @@ const certifications: Array<Certification> = [
       link: "https://www.credly.com/badges/064895cc-8e81-4fc1-86ab-9400d7ec9357/public_url",
       image: {
         alt: "CertiProf Badge",
-        src: "/public/assets/img/cert/certiprof.png",
+        src: "/assets/img/cert/certiprof.png",
       },
     },
   },
@@ -17,7 +17,7 @@ const certifications: Array<Certification> = [
       link: "https://www.credly.com/badges/6e7b7780-1369-4a6e-9afd-990840fca83b/public_url",
       image: {
         alt: "Cisco Networking Academy Badge",
-        src: "/public/assets/img/cert/introduction-to-cybersecurity.png",
+        src: "/assets/img/cert/introduction-to-cybersecurity.png",
       },
     },
   },
@@ -27,7 +27,7 @@ const certifications: Array<Certification> = [
     badge: {
       image: {
         alt: "Cisco Networking Academy Badge",
-        src: "/public/assets/img/cert/intro-network.jpg",
+        src: "/assets/img/cert/intro-network.jpg",
       },
     },
   },
@@ -37,7 +37,7 @@ const certifications: Array<Certification> = [
     badge: {
       image: {
         alt: "Cisco Networking Academy Badge",
-        src: "/public/assets/img/cert/linux-untached.jpg",
+        src: "/assets/img/cert/linux-untached.jpg",
       },
     },
   },
@@ -48,7 +48,7 @@ const certifications: Array<Certification> = [
       link: "https://coursera.org/share/18a96333ab3ac5cf62dc91baf1f0cd58",
       image: {
         alt: "Duke University Badge",
-        src: "/public/assets/img/cert/coursera-web-dev.jpg",
+        src: "/assets/img/cert/coursera-web-dev.jpg",
       },
     },
   },

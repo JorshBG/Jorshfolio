@@ -1,11 +1,11 @@
 const handleTheme = () => {
   if (!localStorage.getItem("theme")) {
-    localStorage.setItem("theme", "light");
+    localStorage.setItem("theme", "dark");
   }
 
   document
     .querySelector("html")
-    ?.setAttribute("data-mode", localStorage.getItem("theme") ?? "light");
+    ?.setAttribute("data-mode", localStorage.getItem("theme") ?? "dark");
 
   
 
@@ -139,7 +139,7 @@ const loadLanguagues = () => {
       window.location.pathname = "/";
     } else if (
       localStorage.getItem("language") === "en" &&
-      window.location.pathname !== "/en"
+      !(window.location.pathname === "/en" || window.location.pathname === "/en/")
     ) {
       window.location.pathname = "/en";
     }
