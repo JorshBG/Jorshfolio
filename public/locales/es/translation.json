@@ -7,7 +7,7 @@
     "body": {
       "description": "<0>¡Hola!</0> Soy un apasionado por la <1>programación</1> <2>Backend</2> y mucho más cuando se trata de <3>micro-servicios</3>. Espero <4>convertirme</4> en un desarrollador<5> Full Stack</5> :)",
       "cv-button": "Descargar CV",
-      "pdf_link":"/public/assets/doc/cv-spanish.pdf",
+      "pdf_link":"/assets/doc/cv-spanish.pdf",
       "findme": "Encuentrame en:"
     }
   },

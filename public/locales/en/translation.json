@@ -7,7 +7,7 @@
     "body": {
       "description": "<0>¡Hi!</0> I am passionate about <1>Backend</1><2> programming</2> and even more so when it comes to <3>micro-services</3>. I hope to <4>become</4> in a <5>Full Stack</5> developer :)",
       "cv-button": "Download CV",
-      "pdf_link":"/public/assets/doc/cv-english.pdf",
+      "pdf_link":"/assets/doc/cv-english.pdf",
       "findme": "Find me on:"
     }
   },
